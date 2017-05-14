@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Contact page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="sf.jpg"  type="sf/jpg" width="10" height="10"/>
+  <link rel="stylesheet" type="text/css" href="style.css">
+<style>
+
+body {
+    background-image:url(images/bg8.jpg);
+    background-attachment: fixed;
+    background-size:cover;                      
+    background-repeat: no-repeat;
+    background-position: center center;
+	font-family:
+	font-weight:900;
+	color:white;
+
+}
+h1,footer{
+text-align: center;
+font-family:
+}
+.button {
+    background-color: Transparent;
+    border: 1px solid;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 28pxx;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+.button:hover{
+background-color:gray;
+opacity:.8;
+
+}
+input[type=text], select, textarea {
+    background : Transparent;
+    width: 100%;  
+    padding: 12px;  
+    border-bottom: 1px solid black; 
+    border-right:Transparent;
+    border-left:Transparent;
+    border-top:Transparent;
+
+
+  box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+
+}
+input[type=text]:hover,textarea:hover{
+ background-color: gray;
+	opacity:.8;
+}
+
+input[type=submit] {
+    background-color: Transparent;
+    color: black;
+    padding: 12px 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+input[type=submit]:hover {
+    background-color: gray;
+	opacity:.8;
+}
+
+
+.container {
+    border-radius: 5px;
+    background-color: Transparent;
+    padding: 20px;
+	width:1000px;
+}
+#social ul{position:relative;
+top:-400px;
+left:120%;
+background-color:transparent;
+max-width:60px;
+
+list-style-type:none;
+}
+#social ul li img:hover{
+width:70px;
+height:70px;
+filter:blur(1px);
+padding:0px 0px 5px 0px;
+
+
+
+}
+
+
+
+</style>
+</head>
+<body>
+  <div align :center>
+    <h1><i>CONTACT ME:Help me ;</i><h1><br/>
+	<h3>There is wide scope to improve my work so,<br/>Would you like to give any feedback or suggestions?</h3>
+    </div>
+  <div class="container">
+   <form action="/action_page.php"><!--Not avialable-->
+
+     <label for="fname">First Name</label>
+     <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+     <label for="lname">Last Name</label>
+     <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+     <label for="subject">Subject</label>
+     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+     <input type="submit" value="Send">
+   </form>
+   <aside id="social">
+   <ul>
+        <li><a href="https://en-gb.facebook.com/login/"><img src="images/fb.png" alt="fb" style="width:50px;height:50px;border:0;"/></a></li>
+        <li><a href="https://twitter.com/login"><img src="images/twiiter.png" alt="twitter" style="width:50px;height:50px;border:0;"/></a></li>
+        <li><a href="https://www.google.com/gmail/"><img src="images/Gmail.png" alt="Gmail" style="width:50px;height:50px;border:0;"/></a></li>
+        <li><a href="https://www.instagram.com/?hl=en"><img src="images/intsu.png" alt="insta" style="width:50px;height:50px;border:0;"/></a></li>
+        <li><a href="https://github.com/"><img src="images/git.png" alt="git" style="width:60px;height:60px;border:0;"/></a></li>
+    </ul>
+   
+   
+   </aside>
+ </div>
+</div>
+
+<footer>
+<span style="position:relative; left:-280px;">&nbsp &copy; Rishi's creation</span>
+<a href="index.html" class="button">Home</a>
+<a href="about.html" class="button">About Me</a>
+<a href="contact.html" class="button">Contact</a>
+<a href="add.html" class="button">Address</a>
+<span style="position:relative; left:120px;">or call @ 7430099888</span>
+</footer>
+</body>
+</html>

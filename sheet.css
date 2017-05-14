@@ -1,0 +1,134 @@
+*{ list-style-type:none;
+}
+#container{     width:100%;
+height:1280px;
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(0,0,0,1));
+	background-repeat:repeat-y;
+	
+     border:3px solid gray;
+
+}
+header{padding:8px 0px 0px 0px;
+	font-family:Serif;
+	height:60px;
+	text-align:centerter;
+	background: linear-gradient(#331a00, #6b6b47, #331a00);
+	/*font-size:28px;*/
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+	font-size:2.4em
+}
+header:hover{
+	color:#00AE56;
+	background-color:blue;
+	
+	
+}
+
+#navi ul li{ color:green;
+	font-family:Verdana Bold Italic;
+	font-weight:100;
+	font-size:20px;
+	padding:20px 0px;
+}
+
+
+.para img{
+	position:relative;
+	left:-30px;
+	bottom:30px;
+	float:left;
+}
+.para2 img{position:relative;
+           left:-160px;
+		   top:10px;
+	
+}
+
+footer{
+	 clear: left;
+    text-align: center;
+	background-color:black;
+	color:white;
+	opacity:.7;
+}
+
+div nav {
+    float: left;
+    max-width: 160px;
+	height:1180px;
+    margin: 0;
+    padding: 1em;
+	border-right:2px solid black;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+	animation-name:side;
+	animation-duration:6s;	
+}
+@keyframes side {
+    0%, 100% { opacity:1; }
+    50% { opacity: .25; }
+}
+   
+nav ul a {
+    text-decoration: none;
+    color:#990033;}
+nav ul a:hover{
+	color:#0099cc;
+	font-size:18px;
+}
+
+.para{width:50%;
+      border:10px solid #c2c2a3;
+	 background-color:#d6d6c2;
+	  border-top-right-radius:50px;
+	  border-bottom-right-radius:50px;
+	   animation-name:move;
+	   animation-duration:6s;
+	   position:relative;
+	   left:144px;
+	   top:90px;
+	    box-shadow: 10px 10px 5px #F8FFB3;
+}
+@keyframes move{
+	from {left:100%; }
+	to{left:144px;}
+	from {background-color:#1e1e15;}
+    to {background-color: white;}
+}
+
+.para2{
+	width:50%;
+      border:10px solid #999966;
+	  background-color:#b8b894;
+	  border-top-left-radius:50px;
+	  border-bottom-left-radius:50px;
+	  animation-name:col;
+	  animation-duration:6s;
+	  position:relative;
+	  top:180px;
+	  right:-642px;
+	  animation-name:mu;
+	animation-duration:6s;
+	 box-shadow:-10px -10px 5px #F8FFB3;
+	 
+	  
+	 	}
+		
+@keyframes mu{
+	from {left:-100%; }
+	to{left:48%;}
+	  from {background-color:#1e1e15;}
+    to {background-color: white;}
+}
+	
+		
+		
+		
+			
+		
