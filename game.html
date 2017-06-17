@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="sty.css"/>
+ <link rel="icon" href="images/sf.jpg"  type="sf/jpg" width="10" height="10"/>
+ 		    <link href="http://fonts.googleapis.com/css?family=FONTNAME" rel="stylesheet" type="text/css" />
+			 
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+			<script type="text/javascript">
+			
+	
+
+jQuery(document).ready(function($){
+ 
+    var bArray = [];
+    var sArray = [4,6,8,10,12,14];
+ 
+    for (var i = 0; i < $('.bubbles').width(); i++) {
+        bArray.push(i);
+    }
+     
+    function randomValue(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+    }
+ 
+    setInterval(function(){
+         
+     
+        var size = randomValue(sArray);
+        $('.bubbles').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
+         
+    
+        $('.individual-bubble').animate({
+            'bottom': '100%',
+            'opacity' : '-=0.7'
+        }, 3000, function(){
+            $(this).remove()
+        }
+        );
+ 
+ 
+    }, 340);
+ 
+});
+
+
+
+
+			</script>
+			
+
+</head>
+<body>
+<script>var user = prompt('Hello, enter your name.','');
+</script>
+<div class="center-outer">
+<div class="center-inner">
+<marquee behaviour="scroll"><span class="marquee"><img src="fish.png" alt="My picture" width="80" height="110 class="marquee"/></span></marquee>
+
+<div class="bubbles">
+
+<h1>Memory Game</br>for</br><script>document.write(user);</script> !! </h1>
+</div>
+<marquee behaviour="scroll" direction="right"><span class="marquee"><img src="fish4.png" alt="fish" width="120" height="150 class="marquee"/></span></marquee>
+</div>
+</div>
+<div class="side">
+<h2 id="one"><a href="assign3.html">New Game</a></h2>
+<h2 id="two" ><a href="">Music</a></h2><!--Not working as expected.Still to do-->
+<h2 id="three"><a href="https://rishikraj.github.io/">About developer</a></h2>
+</div>
+<div class="rule">
+  <input type="checkbox" class="read-more-state" id="post-1" />
+
+  <p class="read-more-wrap">  <span style="font-size:1.5em; color:#242466 ">How to Play ?</span><br/><br/>
+  
+  <span class="read-more-target" >
+  1. Tap the box to open the hidden letter.<br/><br/>
+  2. Then try to open the same letter in consecutive turn.<br/><br/>
+  3.Boxes will remain open if you succeed else disappear.<br/><br/>
+  4.Proceed to hunt the all 8 pairs of alphabets in minimum knocks.<br/></span></p>
+  
+  <label for="post-1" class="read-more-trigger"></label>
+</div>
+<footer>&copy Rishi's creation</footer>
+</body>
+</html>
