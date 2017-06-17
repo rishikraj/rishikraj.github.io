@@ -1,0 +1,159 @@
+
+
+html, body {
+width: 100%;
+height: 100%;
+margin: 0;
+}
+
+.center-outer {
+display: table;
+width: 100%;
+height: 100%;
+}
+
+.center-inner {
+display: table-cell;
+vertical-align: middle;
+text-align: center;
+}
+
+
+body {
+background-color: #3498db;
+ @include display(flex);
+  @include align-content(center);
+  color: #353535;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+.bubbles {
+display: inline-block;
+font-family: arial;
+position: relative;
+font-size:2em;
+}
+
+.bubbles h1 {
+position: relative;
+margin: 1em 0 0;
+font-family: 'Luckiest Guy', cursive;
+color: #fff;
+z-index: 2;
+font-size:2em;
+	
+}
+
+.individual-bubble {
+position: absolute;
+border-radius: 100%;
+bottom: 10px;
+background-color: #fff;
+z-index: 1;
+}
+
+.side{
+	width:30%;
+	padding:0px auto;
+	position:relative;
+	top:-65%;
+	font-size:1.2em;
+	font-family:Georgia, Serif;
+
+}
+#one{
+	background-color:green;
+	height:50px;
+    text-align:center;
+	width:50%;
+	padding-top:5px;
+	padding-bottom:0px auto;
+	 transition: width 2s;
+	}
+#one:hover{
+	width:90%;
+}	
+#two{
+	background-color:yellow;
+	height:50px;
+    text-align:center;
+	width:65%;
+	 transition: width 2s;}
+#two:hover{
+	width:90%;
+}	
+#three{
+	background-color:red;
+	height:50px;
+    text-align:center;
+	width:80%;
+	 transition: width 2s;}
+#three:hover{
+	width:90%;
+}	
+.side a{
+  color:#859599;
+}
+
+
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Show me';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Hide it';
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: red;
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: .25em;
+}
+
+
+
+p {
+  padding: 2%;
+  background: #fff9c6;
+  color: #AC744C;
+  border: 1px solid #fce29f;
+  border-radius: .25em;
+
+}
+.rule{
+  background-color:#D8B094;
+width:30%;  
+position:relative;
+left:70%;
+top:-102%;  
+}
+footer{left:-45%;
+	position:relative;
+	top:-72%;
+	color:white;
+}

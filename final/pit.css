@@ -1,0 +1,194 @@
+html,body {
+
+	margin:0;
+	padding:0;
+	min-width:max-content;
+}
+body {
+    font-family: 'Calligraffitti';font-size: 22px;
+	
+}
+
+.content {
+	
+	position:relative;
+	margin:0;
+	text-align: center;
+	
+	
+}
+.header {
+	position:relative;
+	background-color: #393939; 
+	display:flex;
+	margin:0;
+	text-align: center;
+	justify-content: center;
+}
+
+
+.centerfix {
+	
+	position:relative;
+	display:block;
+	width:900px;
+	padding:50px;
+	margin:auto;
+	margin-top:0px;
+	height:100%;
+	background: linear-gradient(to right, rgba(0,0,0,1),lightgreen, rgba(0,0,0,1));
+	box-shadow: 4px 2px 10px 2px #BAC8CC;
+}
+
+.centerfix h1 {
+
+	color: rgba(117, 238, 25, 1);
+	margin: 10px;
+	font-size: 28px; 
+	color :white;
+	
+}
+
+
+.scoreboard {
+	
+	display:flex;
+	font-size: 1.5em;
+}
+
+.clear {
+	
+	width:25%;
+	margin:0;
+	padding:0;
+	float:left;
+	color: yellow;
+}
+
+.reset {
+	
+	width:max-content;
+	width:25%;
+	display:flex;
+}
+
+.icon {
+	width:max-content;
+	margin-left:80px;
+	padding-top:7px;
+}
+
+.icon:hover {
+	
+	transform:scale(1.2);
+	
+}
+.turns {
+	
+	width:25%;
+	margin:0;
+	padding:0;
+	right:0;
+	color: yellow;
+}
+
+.score {
+	width:25%;
+	margin:0;
+	padding:0;
+}
+
+.Thebox {
+	
+	padding:0;
+	padding:0;
+	width:100%;
+	height:max-content;
+}
+
+.Thebox table {
+	
+	padding:2px;
+	margin:2px;
+	text-align:center;
+	width:75%;
+	height:400px;
+}
+
+.Thebox table TR {
+	
+	width:100%;
+	height:100px;
+}
+
+.Thebox TD {
+	border: 4px solid  #D13438 ;
+	width:25%;
+	font-size:3.9em;
+	border-radius:10px;
+}
+
+.Thebox TD:hover {
+	
+	box-shadow: 4px;
+	
+}
+
+.done {
+	
+	color:skyblue;	
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	color:rgba(0,0,0,0);
+	background:rgba(0,0,0,0);
+}
+
+.card  {
+
+	height:100%;
+	width:100%;
+	transform-style: preserve-3d;
+	transition: all 0.6s linear;
+
+}
+
+.card .front,.card,.card .back {
+	
+	display:block;
+	width:100%;
+	height:80%;
+	padding:0;
+	margin:0;
+
+}
+
+.card .face {
+	
+	position:absolute;
+	backface-visibility:hidden;
+}
+
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  color: black;
+  text-align: center;
+  background:rgba(0,0,0,0);
+  color:#B146C2;
+  
+}
+.container{
+	position:relative;
+	top:-350px;
+	float:right;
+}
+footer{
+	position:relative;
+	top:15%;
+	left:-28%;
+	color:white;
+}
+a{font-size:1.3em;}
