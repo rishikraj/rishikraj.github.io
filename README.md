@@ -1,4 +1,4 @@
 # rishikraj.github.io
 http://rishikraj.totalh.net/
-Rishi's portfolio website
+Has been shifted to Rishi's portfolio website
 
