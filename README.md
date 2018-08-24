@@ -1,2 +1,3 @@
 # rishikraj.github.io
-Rishi's portfolio webpage
+Rishi's portfolio website
+http://rishikraj.totalh.net/
