@@ -1,0 +1,253 @@
+<HTML>
+	<HEAD>
+		<title> Let"s play the Game !! </title>
+		<link rel = 'stylesheet' href = 'pit.css' type = 'text/css'>
+		 <link rel="icon" href="images/sf.jpg"  type="sf/jpg" width="10" height="10"/>
+		 <link href='https://fonts.googleapis.com/css?family=Open+Sans:600,700' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=CarterOne' rel='stylesheet'>
+		<script src = 'jscript.js'></script>
+		<style>
+		
+		*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body {
+  @include display(flex);
+  @include align-content(center);
+  color: #353535;
+  min-height: 100vh;
+  <--!!font-family: 'Open Sans', sans-serif;-->
+  font-size: 14px;
+  text-align: center;
+   background: radial-gradient(circle, #1f4f96, #1b2949, #000);
+
+}
+
+
+
+.wrap{  
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 20px auto 30px auto;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.clicker{
+  background-color: white;
+  outline: none;  
+  font-weight: 600;
+	  position:absolute;
+  cursor: pointer;
+  padding: 0;
+	  border: none;
+	  height: 64px;
+	  width: 64px;
+  left: 8px;
+  top: 8px;
+	  border-radius: 100px;
+	  z-index: 2;
+}
+
+.clicker:active{
+	  transform: translate(0, 1px);
+  height: 63px;
+	  box-shadow: 0px 1px 0 0 rgb(190,190,190) inset;
+}
+
+.circle{
+	  position: relative;
+  border-radius:40px;
+	  width: 80px;
+	  height: 80px;
+	  z-index: 1;
+}
+
+
+
+.clicker:hover + .circle, .clicker:active + .circle {
+	  animation: rotator linear .8s infinite;
+}
+
+@keyframes rotator{
+	  from{ transform: rotate(0deg); }
+	  to{ transform: rotate(360deg); }
+}
+
+		
+.angled {
+			background-image: linear-gradient(45deg, 
+                white 0%,
+                white 30%,
+                rgb(20,190,235) 30%,
+								rgb(20,190,235) 70%, 
+                white 70%, 
+                white 100%);
+		}
+		
+		
+		</style>
+		
+	</HEAD>
+	<BODY onload = 'setup_game()' id = "body">
+		<div class = 'centerfix'>
+		
+			<div class = 'header'>
+					
+		
+			
+				<h1 > REVEAL THE LETTERS AND EARN THE POINTS......  </h1>
+				
+			</div>
+		<div class = 'content'>
+				<div class = 'scoreboard'>
+					<div class = 'success'>
+						<span style="color:#F7630C;"id = 'success'>success: 0</span>
+					</div>
+					<div class = 'score'>
+						<span id = 'score'></span>
+					</div>
+					<div class = 'reset' value = 'reset' onclick = 'setup_game()' id = 'reset'>
+
+					</div>
+					<div class = 'trials'>
+						<span style="color:#F7630C; "id = 'trials'>trials: 0</span>	
+					</div>
+					
+				</div>
+				
+				<div class = 'TheBox'>
+					<TABLE id = 'game'>
+					
+						<TR >
+							<TD>
+								<div id = '00' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>		
+							</TD>
+							<TD >
+								<div id = '01' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+
+							</TD>
+							<TD > 
+								<div id = '02' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+							<TD>
+								<div id = '03' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+						</TR>
+						<TR >
+							<TD>
+								<div id = '10' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>							
+							</TD>
+							
+							<TD>
+								<div id = '11' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+							<TD>
+								<div id = '12' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+							<TD>
+								<div id = '13' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>	
+							</TD>
+						</TR>
+						<TR >
+							<TD>
+								<div id = '20' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>							
+							</TD>
+							<TD>
+								<div id = '21' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+							<TD>
+								<div id = '22' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+							<TD>
+								<div id = '23' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+						</TR>				
+						<TR >
+							<TD>
+								<div id = '30' onclick = 'show(this)' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+							<TD>
+								<div id = '31' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+							<TD >
+								<div id = '32' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+							<TD>
+								<div id = '33' onclick = 'show(this)' class = 'card'>
+									<div class = 'front face' id = 'front' name = 'front'>
+									</div>
+								<div id = 'back' class = 'back face center'></div>
+							</TD>
+						</TR>
+					
+					</TABLE>
+					
+				</div>
+				<div class="container">		
+<div class="wrap">	
+   <button class="clicker"><a href="assign3.html" >Restart</a></button> 
+    <div class="circle angled"></div>
+</div>
+
+<div class="wrap">	
+   <button class="clicker"><a style="color:blue;" href="game.html">Back</a></button>
+    <div class="circle angled"></div>
+</div>
+        </div>
+			</div>
+		</div>
+<footer>&copy Rishi's creation</footer>
+	</BODY>
+
+</HTML>
